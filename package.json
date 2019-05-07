@@ -1,6 +1,6 @@
 {
   "name": "angular-zxcvbn",
-  "version": "3.2.2",
+  "version": "3.2.3",
   "description": "Angular directive for the library zxcvbn",
   "main": "dist/angular-zxcvbn.js",
   "scripts": {
@@ -14,7 +14,8 @@
   "contributors": [
     "Jose Luis Rivas <me@ghostbar.co>",
     "James Clark <james.clark92@hotmail.co.uk>",
-    "Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>"
+    "Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>",
+    "Xavier Dubuc <xavier@dubuc.be>"
   ],
   "license": "MIT",
   "homepage": "https://github.com/ghostbar/angular-zxcvbn",

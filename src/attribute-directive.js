@@ -10,7 +10,8 @@
         scope: {
           zxResult: '=?zxcvbn',
           zxExtras: '=?',
-          zxMinScore: '@?'
+          zxMinScore: '@?',
+          zxFeedback: '=?'
         },
         link: function (scope, element, attrs, ngModelCtrl) {
 
@@ -23,10 +24,14 @@
               scope.zxPassword = '';
             }
 
+            if (angular.isUndefined(scope.zxFeedback)) {
+              scope.zxFeedback = {};
+            }
+
             if (angular.isDefined(scope.zxExtrasArray) && scope.zxExtrasArray.length > 0) {
-              scope.zxResult = zxcvbn(scope.zxPassword, scope.zxExtrasArray);
+              scope.zxResult = zxcvbn(scope.zxPassword, scope.zxExtrasArray, scope.zxFeedback);
             } else {
-              scope.zxResult = zxcvbn(scope.zxPassword);
+              scope.zxResult = zxcvbn(scope.zxPassword, [], scope.zxFeedback);
             }
           };
 
